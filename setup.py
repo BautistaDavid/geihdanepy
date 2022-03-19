@@ -4,19 +4,19 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='example_pypi_package',
-    author='Tom Chen',
-    author_email='tomchen.org@gmail.com',
-    description='Example PyPI (Python Package Index) Package',
-    keywords='example, pypi, package',
+    name='geihpy',
+    author='David Felipe Bauista',
+    author_email='dfbau2002@gmail.com',
+    description='Paquete de Python para usar las bases de datos de la GEIH del DANE.',
+    keywords='geih, pandas, data',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/tomchen/example_pypi_package',
+    url='https://github.com/BautistaDavid/geihpy',
     project_urls={
-        'Documentation': 'https://github.com/tomchen/example_pypi_package',
+        'Documentation': 'https://github.com/BautistaDavid/geihpy',
         'Bug Reports':
-        'https://github.com/tomchen/example_pypi_package/issues',
-        'Source Code': 'https://github.com/tomchen/example_pypi_package',
+        'https://github.com/BautistaDavid/geihpy/issues',
+        'Source Code': 'https://github.com/BautistaDavid/geihpy',
         # 'Funding': '',
         # 'Say Thanks!': '',
     },

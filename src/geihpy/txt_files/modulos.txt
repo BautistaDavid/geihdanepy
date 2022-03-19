@@ -1,0 +1,14 @@
+Las palabras clave validas para los modulos de la GEIH dentro de geihpy son:
+
+__________________________________________________________________________________
+            Modulo de la GEIH                |   Codigo en funciones de geihpy   
+__________________________________________________________________________________
+|            Vivienda y Hogares              |             Vivienda              |
+|         Caracteristicas Generales          |          Caracteristicas          |
+|            Fuerza de Trabajo               |              Fuerza               |
+|                 Ocupados                   |             Ocupados              |
+|                Desocupados                 |            Desocupados            |
+|                 Inactivos                  |             Inactivos             |
+|  Otras actividades y ayudas en la semana   |          Otras actividades        | 
+|               Otros Ingresos               |           Otros Ingresos          |
+__________________________________________________________________________________
