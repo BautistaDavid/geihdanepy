@@ -4,19 +4,19 @@ with open('README.md', 'r', encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='geihpy',
+    name='geihdanepy',
     author='David Felipe Bauista',
     author_email='dfbau2002@gmail.com',
     description='Paquete de Python para usar las bases de datos de la GEIH del DANE.',
     keywords='geih, pandas, data',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/BautistaDavid/geihpy',
+    url='https://github.com/BautistaDavid/geihdanepy',
     project_urls={
-        'Documentation': 'https://github.com/BautistaDavid/geihpy',
+        'Documentation': 'https://github.com/BautistaDavid/geihdanepy',
         'Bug Reports':
-        'https://github.com/BautistaDavid/geihpy/issues',
-        'Source Code': 'https://github.com/BautistaDavid/geihpy',
+        'https://github.com/BautistaDavid/geihdanepy/issues',
+        'Source Code': 'https://github.com/BautistaDavid/geihdanepy',
         # 'Funding': '',
         # 'Say Thanks!': '',
     },

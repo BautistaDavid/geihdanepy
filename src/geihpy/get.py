@@ -1,6 +1,6 @@
 import pandas as pd 
 import os 
-from src.geihpy.utils import __referenciador_modulo, __referenciador_zona, meses
+from src.geihdanepy.utils import __referenciador_modulo, __referenciador_zona, meses
 
 def __link(año:int, mes:str, modulo:str, zona:str) -> str:
     mes = mes.capitalize()
@@ -11,7 +11,7 @@ def __link(año:int, mes:str, modulo:str, zona:str) -> str:
         print(f'ValueEror: {mes} no es un mes valido.')
         return None
     modulo, zona = __referenciador_modulo()[modulo.capitalize()],  __referenciador_zona()[zona.capitalize()] 
-    return  f'https://raw.githubusercontent.com/BautistaDavid/geihpy/main/src/geihpy/sets/{año}/{mes}.csv/{zona}{modulo}.csv'
+    return  f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/sets/{año}/{mes}.csv/{zona}{modulo}.csv'
 
 
 def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
@@ -53,16 +53,16 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
 def info_modulos() -> str:
     '''
     Funcion para conocer los codigos de los modulos de la GEIH dentro de las 
-    funciones de geihpy
+    funciones de geihdanepy
     '''
-    with open('src/geihpy/txt_files/modulos.txt') as file:
+    with open('src/geihdanepy/txt_files/modulos.txt') as file:
         print(file.read())
 
 
 def info_zonas() -> str:
     '''
     Funcion para conocer los codigos de las zonas de la GEIH dentro de las 
-    funciones de geihpy
+    funciones de geihdanepy
     '''
-    with open('src/geihpy/txt_files/zonas.txt') as file:
+    with open('src/geihdanepy/txt_files/zonas.txt') as file:
         print(file.read())

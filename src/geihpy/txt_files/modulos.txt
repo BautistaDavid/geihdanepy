@@ -1,7 +1,7 @@
-Las palabras clave validas para los modulos de la GEIH dentro de geihpy son:
+Las palabras clave validas para los modulos de la GEIH dentro de geihdanepy son:
 
 __________________________________________________________________________________
-            Modulo de la GEIH                |   Codigo en funciones de geihpy   
+            Modulo de la GEIH                |   Codigo en funciones de geihdanepy   
 __________________________________________________________________________________
 |            Vivienda y Hogares              |             Vivienda              |
 |         Caracteristicas Generales          |          Caracteristicas          |
