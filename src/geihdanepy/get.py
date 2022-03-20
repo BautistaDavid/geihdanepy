@@ -1,5 +1,6 @@
 import pandas as pd 
-import os 
+import urllib
+import requests
 from .utils import __referenciador_modulo, __referenciador_zona, meses
 
 def __link(año:int, mes:str, modulo:str, zona:str) -> str:
@@ -50,19 +51,29 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
     except ValueError as e: 
         None
     
-def info_modulos() -> str:
-    '''
-    Funcion para conocer los codigos de los modulos de la GEIH dentro de las 
-    funciones de geihdanepy
-    '''
-    with open('geihdanepy/txt_files/modulos.txt') as file:
-        print(file.read())
-
 
 def info_zonas() -> str:
     '''
     Funcion para conocer los codigos de las zonas de la GEIH dentro de las 
     funciones de geihdanepy
     '''
-    with open( f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/zonas.txt') as file:
-        print(file.read())
+    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/modulos.txt'
+    file = urllib.request.urlopen(url)
+    for line in file:
+	    decoded_line = line.decode("utf-8")
+	    print(decoded_line)
+
+def info_modulos() ->str:
+    '''
+    Funcion para conocer los codigos de los modulos de la GEIH dentro de las 
+    funciones de geihdanepy
+    '''
+    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/zonas.txt'
+    file = urllib.request.urlopen(url)
+    for line in file:
+	    decoded_line = line.decode("utf-8")
+	    print(decoded_line)
+
+
+
+
