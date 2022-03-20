@@ -1,6 +1,37 @@
-# Example PyPI (Python Package Index) Package & Tutorial / Instruction / Workflow for 2021
+## GeihdanePy
+___
 
-[![PyPI package](https://img.shields.io/badge/pip%20install-example--pypi--package-brightgreen)](https://pypi.org/project/example-pypi-package/) [![version number](https://img.shields.io/pypi/v/example-pypi-package?color=green&label=version)](https://github.com/tomchen/geihpy/releases) [![Actions Status](https://github.com/tomchen/geihpy/workflows/Test/badge.svg)](https://github.com/tomchen/geihpy/actions) [![License](https://img.shields.io/github/license/tomchen/geihpy)](https://github.com/tomchen/geihpy/blob/main/LICENSE)
+##### **It's time for the GEIH to know python** 
+
+[![PyPI package](https://img.shields.io/badge/pip%20install-geihdanepy-red)](https://pypi.org/project/geihdanepy/) [![License](https://img.shields.io/badge/license-MIT-red)](https://github.com/BautistaDavid/geihdanepy/blob/main/LICENSE)
+
+
+**Geihdanepy es un paquete de python para facilitar el uso de los datos de la Gran Encuestra Integrada de Hogares del DANE.**
+
+## **Descripción**
+
+El paquete ```geihdanepy``` nace de la idea de estudiantes de economía para facilitar la investigación científica - académica usando los datos de la Gran Encuesta Integrada de Hogares, una de las más importantes bases de datos que proporciona de forma abierta el Departamento Nacional de Estadística **DANE**. 
+
+## **¿Como usar geihdanepy?**
+
+#### Primero lo primero 
+
+
+```
+import geihdanepy as geih
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 This is an example [PyPI](https://pypi.org/) (Python Package Index) package set up with automated tests and package publishing workflow using GitHub Actions CI/CD. It is made primarily for GitHub + VS Code (Windows / Mac / Linux) users who are about to write and publish their first PyPI package. The package could serve as a starter / boilerplate / demo and the tutorial could give you a quick and concise explaination to solve some small but annoying problems you might encounter, such as package / module name confusion, and VS Code test configuration issues.
 
