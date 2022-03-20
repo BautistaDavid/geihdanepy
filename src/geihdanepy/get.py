@@ -55,7 +55,7 @@ def info_modulos() -> str:
     Funcion para conocer los codigos de los modulos de la GEIH dentro de las 
     funciones de geihdanepy
     '''
-    with open('src/geihdanepy/txt_files/modulos.txt') as file:
+    with open('geihdanepy/txt_files/modulos.txt') as file:
         print(file.read())
 
 
@@ -64,5 +64,5 @@ def info_zonas() -> str:
     Funcion para conocer los codigos de las zonas de la GEIH dentro de las 
     funciones de geihdanepy
     '''
-    with open('src/geihdanepy/txt_files/zonas.txt') as file:
+    with open('geihdanepy/txt_files/zonas.txt') as file:
         print(file.read())
