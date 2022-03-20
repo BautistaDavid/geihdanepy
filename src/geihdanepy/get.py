@@ -64,5 +64,5 @@ def info_zonas() -> str:
     Funcion para conocer los codigos de las zonas de la GEIH dentro de las 
     funciones de geihdanepy
     '''
-    with open('geihdanepy/txt_files/zonas.txt') as file:
+    with open( f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/zonas.txt') as file:
         print(file.read())
