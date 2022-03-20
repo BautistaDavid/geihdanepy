@@ -1,6 +1,6 @@
 import pandas as pd 
 import os 
-from src.geihdanepy.utils import __referenciador_modulo, __referenciador_zona, meses
+from .utils import __referenciador_modulo, __referenciador_zona, meses
 
 def __link(año:int, mes:str, modulo:str, zona:str) -> str:
     mes = mes.capitalize()
