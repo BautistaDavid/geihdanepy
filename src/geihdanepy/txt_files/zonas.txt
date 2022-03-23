@@ -1,9 +1,10 @@
 Las palabras clave validas para los zonas de la GEIH dentro de geihdanepy son:
 
-__________________________________________________________
+____________________________________________________________
 |    Zonas de la GEIH   | Zonas en funciones de geihdanepy |
-|____________________ ___________________________________|
-|        Area          |             Area                |
-|      Cabecera        |           Cabecera              |
-|        Resto         |             Resto               |
-----------------------------------------------------------
+|____________________ _____________________________________|
+|        Area          |             Area                  |
+|      Cabecera        |           Cabecera                |
+|        Resto         |             Resto                 |
+|    Todas las Zonas   |              all                  |
+------------------------------------------------------------
