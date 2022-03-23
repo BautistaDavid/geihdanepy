@@ -1,6 +1,7 @@
 import pandas as pd 
 import urllib
 import requests
+import collections
 from .utils import __referenciador_modulo, __referenciador_zona, meses
 
 def __link(año:int, mes:str, modulo:str, zona:str) -> str:
@@ -42,14 +43,23 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
     ## Ejemplos
 
     ```geih.datos('2015', 'Agosto', 'Ocupados', 'Area')``` 
-    
     '''
-    try:
-        return pd.read_csv(__link(año, mes, modulo, zona), sep = ';')
-    except KeyError as e:
-        print(f'KeyError: {e} no se reconoce como un argumento valido')
-    except ValueError as e: 
-        None
+    if zona == 'all':
+        a = pd.read_csv(__link(año, mes, modulo, 'area'), sep = ';')
+        c = pd.read_csv(__link(año, mes, modulo, 'cabecera'), sep = ';') 
+        r = pd.read_csv(__link(año, mes, modulo, 'resto'), sep = ';')
+        valores = [x for x, y in collections.Counter(list(a.columns) + list(c.columns)).items() if y > 1]
+        valores = [x for x, y in collections.Counter(valores + list(r.columns)).items() if y > 1]
+        a, c, r = a[valores], c[valores], r[valores]
+        return pd.concat([a,c,r])
+
+    else:
+        try:
+            return pd.read_csv(__link(año, mes, modulo, zona), sep = ';')
+        except KeyError as e:
+            print(f'KeyError: {e} no se reconoce como un argumento valido')
+        except ValueError as e: 
+            None   
     
 
 def info_zonas() -> str:
@@ -63,6 +73,7 @@ def info_zonas() -> str:
 	    decoded_line = line.decode("utf-8")
 	    print(decoded_line)
 
+
 def info_modulos() ->str:
     '''
     Funcion para conocer los codigos de los modulos de la GEIH dentro de las 
@@ -73,6 +84,8 @@ def info_modulos() ->str:
     for line in file:
 	    decoded_line = line.decode("utf-8")
 	    print(decoded_line)
+
+
 
 
 
