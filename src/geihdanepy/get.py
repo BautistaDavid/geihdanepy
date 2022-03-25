@@ -48,7 +48,7 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
         a = pd.read_csv(__link(año, mes, modulo, 'area'), sep = ';')
         c = pd.read_csv(__link(año, mes, modulo, 'cabecera'), sep = ';') 
         r = pd.read_csv(__link(año, mes, modulo, 'resto'), sep = ';')
-        valores = [x for x, y in collections.Counter(list(a.columns) + list(c.columns)).items() if y > 1]
+        valores = [x for x, y in collections.Counter(list(a.columns) + list(c.columns)).items() if y > 1]  # se queda con las columnas que se repitan en todos los df 
         valores = [x for x, y in collections.Counter(valores + list(r.columns)).items() if y > 1]
         a, c, r = a[valores], c[valores], r[valores]
         return pd.concat([a,c,r])
@@ -67,7 +67,7 @@ def info_zonas() -> str:
     Funcion para conocer los codigos de las zonas de la GEIH dentro de las 
     funciones de geihdanepy
     '''
-    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/modulos.txt'
+    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/zonas.txt'
     file = urllib.request.urlopen(url)
     for line in file:
 	    decoded_line = line.decode("utf-8")
@@ -79,7 +79,7 @@ def info_modulos() ->str:
     Funcion para conocer los codigos de los modulos de la GEIH dentro de las 
     funciones de geihdanepy
     '''
-    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/zonas.txt'
+    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/modulos.txt'
     file = urllib.request.urlopen(url)
     for line in file:
 	    decoded_line = line.decode("utf-8")
