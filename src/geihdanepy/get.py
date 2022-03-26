@@ -48,31 +48,15 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
 
     ```geih.datos('2015', 'Agosto', 'Ocupados', 'Area')``` 
     '''
-    if año == 2008:
-        if zona == 'all':
-            a = pd.read_csv(__link(año, mes, modulo, 'area'), sep = ',')
-            c = pd.read_csv(__link(año, mes, modulo, 'cabecera'), sep = ',') 
-            r = pd.read_csv(__link(año, mes, modulo, 'resto'), sep = ',')
-            valores = [x for x, y in collections.Counter(list(a.columns) + list(c.columns)).items() if y > 1]  # se queda con las columnas que se repitan en todos los df 
-            valores = [x for x, y in collections.Counter(valores + list(r.columns)).items() if y > 1]
-            a, c, r = a[valores], c[valores], r[valores]
-            return pd.concat([a,c,r])
-        else:
-            try:
-                return pd.read_csv(__link(año, mes, modulo, zona), sep = ',')
-            except KeyError as e:
-                print(f'KeyError: {e} no se reconoce como un argumento valido')
-            except ValueError as e: 
-                None  
-
-    elif zona =='all':
-        a = pd.read_csv(__link(año, mes, modulo, 'area'), sep = ',')
-        c = pd.read_csv(__link(año, mes, modulo, 'cabecera'), sep = ',') 
-        r = pd.read_csv(__link(año, mes, modulo, 'resto'), sep = ',')
+    if zona == 'all':
+        a = pd.read_csv(__link(año, mes, modulo, 'area'), sep = ';')
+        c = pd.read_csv(__link(año, mes, modulo, 'cabecera'), sep = ';') 
+        r = pd.read_csv(__link(año, mes, modulo, 'resto'), sep = ';')
         valores = [x for x, y in collections.Counter(list(a.columns) + list(c.columns)).items() if y > 1]  # se queda con las columnas que se repitan en todos los df 
         valores = [x for x, y in collections.Counter(valores + list(r.columns)).items() if y > 1]
         a, c, r = a[valores], c[valores], r[valores]
         return pd.concat([a,c,r])
+
     else:
         try:
             return pd.read_csv(__link(año, mes, modulo, zona), sep = ';')
