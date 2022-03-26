@@ -17,14 +17,3 @@ def __referenciador_zona():
 
 def meses():
     return ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-
-ref_modulo = {'Vivienda':'v',
-                   'Caracteristicas':'c',
-                   'Fuerza':'f',
-                   'Ocupados':'o',
-                   'Desocupados':'d',
-                   'Inactivos':'i',
-                   'Otras actividades':'o_a',
-                   'Otros ingresos':'o_i'}
-
-ref_modulo['Otras Actividades']
