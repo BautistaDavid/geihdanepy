@@ -48,7 +48,10 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
 
     ```geih.datos('2015', 'Agosto', 'Ocupados', 'Area')``` 
     '''
-    if zona == 'all':
+    if año == 2008:
+        print('Opss ... Estamos Trabajando para habilitar los años del 2008. ¡Quedate atento a las actualizaciones!')
+    
+    elif zona == 'all':
         a = pd.read_csv(__link(año, mes, modulo, 'area'), sep = ';')
         c = pd.read_csv(__link(año, mes, modulo, 'cabecera'), sep = ';') 
         r = pd.read_csv(__link(año, mes, modulo, 'resto'), sep = ';')
