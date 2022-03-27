@@ -5,8 +5,8 @@ def __referenciador_modulo():
                    'Ocupados':'o',
                    'Desocupados':'d',
                    'Inactivos':'i',
-                   'Otras Actividades':'o_a',
-                   'Otros Ingresos':'o_i'}
+                   'Otras actividades':'o_a',
+                   'Otros ingresos':'o_i'}
     return ref_modulo 
 
 def __referenciador_zona():
@@ -17,3 +17,5 @@ def __referenciador_zona():
 
 def meses():
     return ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
+
