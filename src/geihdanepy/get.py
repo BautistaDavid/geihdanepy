@@ -2,7 +2,7 @@ import pandas as pd
 import urllib
 import requests
 import collections
-from .utils import __referenciador_modulo, __referenciador_zona, meses
+from .utils import __referenciador_modulo, __referenciador_zona, meses, __referenciador_modulo_macro2018
 
 def __link(año:int, mes:str, modulo:str, zona:str) -> str:
     """
@@ -64,6 +64,36 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
             print(f'KeyError: {e} no se reconoce como un argumento valido')
         except ValueError as e: 
             None   
+
+
+
+def datos_marco_2018(año:int, mes:str,modulo:str):
+    modulo = __referenciador_modulo_macro2018()[modulo]
+    '''
+    Función para obtener datos de la encuesta GEIH del DANE Versión Marco 2018 (2022 en adelante)
+    
+     ## Parametros
+    año: int
+        Un año entre el rango de 2007 a 2021, para los cuales actualemente estan
+        disponibles los datos de la GEIH.
+    mes: str
+        El mes de los datos de la GEIH a los que se quieren acceder.
+        Ejemplo: ```Abril```
+    modulo: str
+        El modulo de los datos de la GEIH a los que se quiere acceder, usando la funcion
+        ```info_modulos()``` puede acceder a las palabras clave para hacer referencia a cada uno de estos.
+        Ejemplo: ```Caracteristicas```
+
+    ## Returns 
+
+    La funcion devuelve un dato tipo ```pd.DataFrame``` con los datos segun los parametros registrados.
+
+    ## Ejemplos
+
+    ```geih.datos_marco_2018('2022', 'Enero', 'Ocupados')``` 
+    ''' 
+    return pd.read_csv(f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/sets/{año}/{mes}/{modulo}.csv',sep=';')
+
     
 
 def info_zonas() -> str:
