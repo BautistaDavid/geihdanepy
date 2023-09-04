@@ -69,6 +69,7 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
 
 def datos_marco_2018(año:int, mes:str,modulo:str):
     modulo = __referenciador_modulo_macro2018()[modulo].lower()
+    mes = mes.capitalize()
     '''
     Función para obtener datos de la encuesta GEIH del DANE Versión Marco 2018 (2022 en adelante)
     
