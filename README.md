@@ -18,7 +18,7 @@ El paquete ```geihdanepy``` nace de la idea de estudiantes de economía para fac
 
 Para empezar a trabajar con geihdanepy se debe realizar la instalación del paquete usando el comando ```pip install geihdanepy```. Cuando el paquete este instalado procedemos a importarlo.
 
-```
+```python
 import geihdanepy as geih
 ```
 
@@ -26,7 +26,7 @@ import geihdanepy as geih
 
 Ahora que el paquete está instalado podemos seguir la siguiente sintaxis para solicitar una de las diferentes tablas que ofrece la GEIH.
 
-```
+```python
 df = geih.datos(2015,'Octubre','Ocupados','Cabecera')
 ```
 
@@ -34,11 +34,11 @@ Por otro lado, si usted está familiarizado con la GEIH sabrá que esta cuenta p
 
 De manera que si quiere conocer cómo funciona la sintaxis dentro de  ```geihdanepy``` para hacer referencia los diferentes módulos y zonas puede hacerlo usando las siguientes funciones.
 
-```
+```python
 geih.info_modulos()   # Acceder a información de los Modulos 
 ```
 
-```
+```python
 geih.info_zonas()   # Acceder a información de las zonas
 ```
 
@@ -46,7 +46,7 @@ geih.info_zonas()   # Acceder a información de las zonas
 
 El Departamento de Estadística Nacional en colombina DANE cambio el marco metodológico de la GEIH a partir del año 2022, para el caso del módulo geihdanepy se generaron nueva funciones que permiten interactuar con la información publicada para el año 2022 y 2023 (próximamente).
 
-```
+```python
 import geihdanepy as geih
 
 df = geih.datos_marco_2018(2022,'Enero','Ocupados')
