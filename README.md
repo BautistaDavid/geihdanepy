@@ -39,6 +39,21 @@ geih.info_modulos()   # Acceder a información de los Modulos
 ```
 
 ```
-geih.info_zonas()   # Acceder a información de las zonas  
+geih.info_zonas()   # Acceder a información de las zonas
 ```
+
+## Actualización GEIH Marco 2018
+
+El Departamento de Estadística Nacional en colombina DANE cambio el marco metodológico de la GEIH a partir del año 2022, para el caso del módulo geihdanepy se generaron nueva funciones que permiten interactuar con la información publicada para el año 2022 y 2023 (próximamente).
+
+```
+import geihdanepy as geih
+
+df = geih.datos_marco_2018(2022,'Enero','Ocupados')
+
+## Para acceder a información sobre los modulos de la GEIH Marc0 2018 dentro de las funciones
+
+geih.info_modulos_marco2018()
+```
+
 
