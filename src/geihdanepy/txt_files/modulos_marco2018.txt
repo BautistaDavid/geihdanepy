@@ -1,0 +1,15 @@
+Las palabras clave validas para los zonas de la GEIH dentro de geihdanepy son:
+
+______________________________________________________________________________________________________________________________________
+|                          Modulos de la GEIH Marco2018                     |       Modulos de la GEIH Marco2018 en funciones         |
+|____________________ ______________________________________________________|_________________________________________________________|
+|      Características generales, seguridad social en salud y educación     |            caracteristicas                              |
+|                  Datos del hogar y la vivienda                            |            hogar_vivienda                               |
+|                       Fuerza de trabajo                                   |             fuerza_trabajo                              |
+|                           Migración                                       |              migracion                                  |
+|                          No Ocupados                                      |              no_ocupados                                |
+|                           Ocupados                                        |                ocupados                                 |
+|                  Otras formas de trabajo                                  |           otras_formas_trabajo                          |
+|                  Otros ingresos e impuestos                               |          otros_ingresos_impuestos                       |
+|                    Tipo de investigación                                  |             tipo_investigacion                          |
+---------------------------------------------------------------------------------------------------------------------------------------

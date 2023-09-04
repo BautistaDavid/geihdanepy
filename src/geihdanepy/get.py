@@ -68,7 +68,7 @@ def datos(año:int, mes:str, modulo:str, zona:str) -> pd.DataFrame:
 
 
 def datos_marco_2018(año:int, mes:str,modulo:str):
-    modulo = __referenciador_modulo_macro2018()[modulo]
+    modulo = __referenciador_modulo_macro2018()[modulo].lower()
     '''
     Función para obtener datos de la encuesta GEIH del DANE Versión Marco 2018 (2022 en adelante)
     
@@ -92,9 +92,20 @@ def datos_marco_2018(año:int, mes:str,modulo:str):
 
     ```geih.datos_marco_2018('2022', 'Enero', 'Ocupados')``` 
     ''' 
-    return pd.read_csv(f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/sets/{año}/{mes}/{modulo}.csv',sep=';')
+    return pd.read_csv(f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/sets/{año}/{mes}/{modulo}.csv',sep=';',encoding='latin')
 
-    
+def info_modulos_marco2018() -> str:
+    '''
+    Funcion para conocer los codigo de los modulos de la GEIH dentro de las funciones
+    de geihdanepy.
+    ''' 
+
+    url = f'https://raw.githubusercontent.com/BautistaDavid/geihdanepy/main/src/geihdanepy/txt_files/modulos_marco2018.txt'
+    file = urllib.request.urlopen(url)
+    for line in file:
+        decoded_line = line.decode('utf-8')
+        print(decoded_line)
+
 
 def info_zonas() -> str:
     '''
